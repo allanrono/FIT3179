@@ -8,12 +8,19 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
-
-<div id="vis"></div>
-
+  <h2>This is visualization 1</h2>
+<div id="vis-1"></div>
+  <hr>
+  <h2>This is visualization 2</h2>
+<div id="vis-2"></div>
+ 
 <script type="text/javascript">
-  var spec = "https://allanrono.github.io/FIT3179/visualization.vl.json";
-  vegaEmbed('#vis', spec).then(function(result) {
+  var spec1 = "https://allanrono.github.io/FIT3179/visualization.vl.json";
+  var spec2 = "https://allanrono.github.io/FIT3179/v2-visualization.vl.json";
+  vegaEmbed('#vis-1', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    vegaEmbed('#vis-2', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
